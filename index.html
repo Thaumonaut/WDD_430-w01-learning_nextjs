@@ -7,15 +7,14 @@
     <script type="text/jsx">
       const app = document.getElementById('app');
 
+      function Header() {
+        return (
+          <h1>Develop 💻 Preview 🔎 Ship 🚀 Be Awesome 😎</h1>
+        )
+      }
+
       const root = ReactDOM.createRoot(app);
-
-      root.render(<h1>Develop 💻 Preview 🔎 Ship 🚀 Be Awesome 😎</h1>)
-
-      // const header = document.createElement('h1');
-      // const text = 'Develop 💻 Preview 🔎 Ship 🚀 Be Awesome 😎';
-      // headerContent = document.createTextNode(text);
-      // header.appendChild(headerContent);
-      // app.appendChild(header);
+      root.render(<Header />)
     </script>
   </body>
 </html>
