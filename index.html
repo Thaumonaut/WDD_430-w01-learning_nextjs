@@ -7,16 +7,24 @@
     <script type="text/jsx">
       const app = document.getElementById('app');
 
-      function Header() {
+      function Header({title}) {
         return (
-          <h1>Develop 💻 Preview 🔎 Ship 🚀 Be Awesome 😎</h1>
-        )
+            <h1>{title ? title : "Replace me in \`title\` attribute"}</h1>
+          )
       }
 
       function HomePage() {
+
+        const names = ['Mark Hamill', 'Carrie Fisher', 'Harrison Ford']
+
         return (
           <div className="Home">
-            <Header />
+            <Header title="Star Wars Actors" />
+            <ul>
+              {names.map((name) => (
+                <li key={name}>{name}</li>
+              ))}
+            </ul>
           </div>
         )
       }
